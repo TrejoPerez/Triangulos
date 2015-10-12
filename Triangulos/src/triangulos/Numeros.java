@@ -28,16 +28,23 @@ public class Numeros {
     }
     public String conocerTriangulo(){
         String resultado="";
-        
-            if(ladoA==ladoB && ladoB==ladoC && ladoC==ladoA){
+        if(ladoA==0 ){
+           resultado="No puedes meter ceros en el lado a";
+        }else if(ladoB==0 ){
+            resultado="No puedes meter ceros en el lado b";
+        }else if(ladoC==0){
+            resultado="No puedes meter ceros en el lado c";
+        }
+        else{
+             if(ladoA==ladoB && ladoB==ladoC && ladoC==ladoA){
                 resultado="El triangulo es Equilatero";
             }else if(ladoB==ladoC || ladoC==ladoA || ladoA==ladoB){
                 resultado="El triangulo es isoceles";
             }else if(ladoA!=ladoB && ladoC!=ladoA){            
                 resultado="El triangulo es escaleno";
             }
-        
-        
+            
+        }
         return resultado;
     }
     
